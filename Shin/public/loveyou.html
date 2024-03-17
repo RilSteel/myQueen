@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lovely Shin</title>
+    <link rel="shortcut icon" href="../img/favicon/icons8-favorite-48.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            background: url(../img/tuwaaa.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+        
+        @media only screen and (min-width: 580px) {
+            .container {
+                width: 100%;
+                height: 100vh;
+                background: url(../img/tuwaaa.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: auto;
+            }
+        }
+        
+        .text {
+            margin: 60px;
+            line-height: 50px;
+            font-size: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text"></div>
+    </div>
+    <script>
+        const div = document.querySelector(".text");
+        const text = `Selamat Ulang Tahun My Lovely Shin, Semoga aku berhasil jadi orang pertama yang ucapin itu. Semoga di umur kamu sekarang semesta lebih berpihak, Semoga bisa mendapatkan hal yang selama ini di perjuangkan. Semoga senantiasa diberi kebahagiaan.
+
+I love you on your birthday, and everyday, now and forever. Aku mau ucapin terimakasih buat selama ini, terimakasih udah jalan sejauh ini, terimakasih udah nerima kurang lebihnya aku, terimakasih atas sabarmu, terimakasih buat semua yang kamu kasih ke aku, yang aku gabisa bales satu per satu, makasih atas effort, perhatian, apapun itu dalam bentuk apapun itu, aku ucapain terimakasih banyak.
+
+Aku minta maaf aku bukan cowo yang bisa ngerti kamu, ngga paham sama pikiran kamu,
+maaf buat perilaku yang nyakitin kamu, maaf selalu ngerepotin kamu,
+jangan bosen sama aku, jangan jauh sama aku, tetep sama aku.`;
+
+
+        function textTypingEffect(element, text, i = 0) {
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                return;
+            }
+
+            setTimeout(() => textTypingEffect(element, text, i + 1), 50)
+
+        }
+
+        textTypingEffect(div, text);
+    </script>
+</body>
+
+</html>
