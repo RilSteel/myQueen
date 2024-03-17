@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0b1522;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body h3 {
+    color: #fff;
+    margin-top: 50px;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#heart_button {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #f20044;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6 linear infinite;
+    -webkit-animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+        -webkit-transform: rotate(-45deg) scale(1.07);
+        -moz-transform: rotate(-45deg) scale(1.07);
+        -ms-transform: rotate(-45deg) scale(1.07);
+        -o-transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+        -webkit-transform: rotate(-45deg) scale(1.0);
+        -moz-transform: rotate(-45deg) scale(1.0);
+        -ms-transform: rotate(-45deg) scale(1.0);
+        -o-transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.8);
+        -webkit-transform: rotate(-45deg) scale(0.8);
+        -moz-transform: rotate(-45deg) scale(0.8);
+        -ms-transform: rotate(-45deg) scale(0.8);
+        -o-transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+#heart_button::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+#heart_button::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+.content-2 {
+    animation: transitionIn 0.75s;
+    -webkit-animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: rotateX(-10deg);
+        -webkit-transform: rotateX(-10deg);
+        -moz-transform: rotateX(-10deg);
+        -ms-transform: rotateX(-10deg);
+        -o-transform: rotateX(-10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0);
+        -webkit-transform: rotateX(0);
+        -moz-transform: rotateX(0);
+        -ms-transform: rotateX(0);
+        -o-transform: rotateX(0);
+    }
+}
+
+#gift-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gift-container::before {
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    top: 90px;
+    left: -80px;
+}
+
+.gift {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: #e9c46a;
+}
+
+.gift::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    background-color: #e76f51;
+    left: 62px;
+}
+
+.gift::after {
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    height: 100px;
+}
+
+#click {
+    display: none;
+}
+
+.click {
+    position: absolute;
+    background-color: #e9c46a;
+    width: 170px;
+    height: 40px;
+    top: -40px;
+    left: -10px;
+    transform-origin: bottom left;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+}
+
+.click::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 40px;
+    background-color: #e76f51;
+    left: 72px;
+}
+
+.click::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 30px solid #e76f51;
+    border-top: 30px solid #e76f51;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    left: 65px;
+    top: -47px;
+}
+
+#click:checked+.click {
+    transform: rotate(-110deg) scale(0.85);
+    -webkit-transform: rotate(-110deg) scale(0.85);
+    -moz-transform: rotate(-110deg) scale(0.85);
+    -ms-transform: rotate(-110deg) scale(0.85);
+    -o-transform: rotate(-110deg) scale(0.85);
+}
+
+#click:checked~.wishes {
+    transform: translateY(-120px);
+    -webkit-transform: translateY(-120px);
+    -moz-transform: translateY(-120px);
+    -ms-transform: translateY(-120px);
+    -o-transform: translateY(-120px);
+}
+
+.wishes {
+    position: absolute;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    padding-top: 5px;
+    padding-right: 5px;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-align: center;
+    color: #333;
+    z-index: -1;
+    text-shadow: 0 0 10px #020202;
+    background-color: #fff;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.ayang {
+    font-size: 16px;
+}
+
+.myLove {
+    color: red;
+}
+
+.clickIni {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    top: 140px;
+    text-align: center;
+    cursor: pointer;
+}
